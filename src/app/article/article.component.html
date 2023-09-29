@@ -1,0 +1,13 @@
+<h2>{{ title }}</h2>
+<p>{{ content }}</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt cupiditate doloremque molestias recusandae ratione tempore, sed in placeat eveniet repellendus tenetur adipisci. Ea nemo, ab tenetur unde architecto velit veniam!</p>
+<hr>
+<h1 [ngStyle] = "{backgroundColor: isTechrelated ? 'blue' : 'yellow'}">{{ title }}</h1>
+<button class="btn btn-primary" (click) = "changeIsTechRelated()"
+Change isTechrelated>Change isTechrelated</button>
+<hr>
+<p *ngIf = "isTechrelated else notTechRelated"> Tech Related </p>
+<ng-template #notTechRelated>
+  <p>Not Tech Related</p>
+</ng-template>
+
